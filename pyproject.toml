@@ -8,7 +8,7 @@ classifiers = [
   "Operating System :: OS Independent",
 ]
 description = "Python package that generates Wi-Fi QR Codes that can be scanned for easily connecting to Wi-Fi."
-name = "Wi-Fi_QRCode_Generator_melonsmasher"
+name = "Wi-Fi_QRCode_Generator"
 readme = "README.md"
 requires-python = ">=3.8"
 version = "0.1.0"
