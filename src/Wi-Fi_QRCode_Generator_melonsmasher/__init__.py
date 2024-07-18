@@ -49,9 +49,6 @@ class WifiPhase2Auth(Enum):
     MSCHAP = 'MSCHAP'
     MSCHAPV2 = 'MSCHAPV2'
     GTC = 'GTC'
-    AKA = 'AKA'
-    AKA_PRIME = 'AKA_PRIME'
-    SIM = 'SIM'
 
     def __str__(self):
         return self.value
@@ -65,10 +62,10 @@ class WifiNetworkSettings:
     def __init__(
             self,
             ssid: str,
-            password: str,
-            security: WifiSecurity,
-            visible: bool = True,
-            user: str = None,
+            security: WifiSecurity=None,
+            hidden: bool = False,
+            identity: str = None,
+            password: str=None,
             eap_method: WifiEapMethod = None,
             phase_2_auth: WifiPhase2Auth = None,
             anon_outer_identity: bool = False,
@@ -81,10 +78,10 @@ class WifiNetworkSettings:
         :type password: str
         :param security: The security type of the Wi-Fi network
         :type security: WifiSecurity
-        :param visible: Whether the Wi-Fi network SSID is visible or not
-        :type visible: bool
-        :param user: The username to use for enterprise Wi-Fi networks
-        :type user: str
+        :param hidden: Whether the Wi-Fi network SSID is visible or not
+        :type hidden: bool
+        :param identity: The username to use for enterprise Wi-Fi networks
+        :type identity: str
         :param eap_method: The EAP method to use for enterprise Wi-Fi networks
         :type eap_method: WifiEapMethod
         :param phase_2_auth: The Phase 2 authentication method to use for enterprise Wi-Fi networks
@@ -95,8 +92,8 @@ class WifiNetworkSettings:
         self.ssid = ssid
         self.password = password
         self.security = security
-        self.visible = visible
-        self.user = user
+        self.hidden = hidden
+        self.identity = identity
         self.eap_method = eap_method
         self.phase_2_auth = phase_2_auth
         self.anon_outer_identity = anon_outer_identity
@@ -108,7 +105,7 @@ class WifiNetworkSettings:
         :rtype: str
         """
         wifi_settings_string = f'WIFI:S:{self.ssid};'
-        if not self.visible:
+        if self.hidden:
             wifi_settings_string += 'H:true;'
         if self.security and self.security != WifiSecurity.NONE:
             wifi_settings_string += f'T:{str(self.security.value)};'
@@ -118,8 +115,8 @@ class WifiNetworkSettings:
             wifi_settings_string += f'PH2:{str(self.phase_2_auth.value)};'
         if self.anon_outer_identity:
             wifi_settings_string += 'A:anon;'
-        if self.user:
-            wifi_settings_string += f'I:{self.user};'
+        if self.identity:
+            wifi_settings_string += f'I:{self.identity};'
         if self.password:
             wifi_settings_string += f'P:{self.password};'
         wifi_settings_string += ';'
