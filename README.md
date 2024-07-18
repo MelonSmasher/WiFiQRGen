@@ -1,16 +1,15 @@
-# WiFiQR (Wi-Fi QRCode Generator)
+# WiFiQR-Gen (Wi-Fi QRCode Generator)
 
-[![PyPI version](https://badge.fury.io/py/WiFiQR.svg)](https://badge.fury.io/py/WiFiQR)
-[![Downloads](https://pepy.tech/badge/wifiqr)](https://pepy.tech/project/wifiqr)
-[![Downloads](https://pepy.tech/badge/wifiqr/month)](https://pepy.tech/project/wifiqr)
-[![Downloads](https://pepy.tech/badge/wifiqr/week)](https://pepy.tech/project/wifiqr)
+[![GitHub License](https://img.shields.io/github/license/MelonSmasher/WiFiQR-Gen)]
+[![PyPI version](https://badge.fury.io/py/WiFiQR.svg)](https://badge.fury.io/py/WiFiQR-Gen)
+[![Downloads](https://pepy.tech/badge/WiFiQR-Gen)](https://pepy.tech/project/WiFiQR-Gen)
 
 Python package that generates Wi-Fi QR Codes that can be scanned for easily connecting to Wi-Fi.
 
 ## Installation
 
 ```bash
-pip install WiFiQR
+pip install WiFiQR-Gen
 ```
 
 ## Usage
@@ -28,7 +27,7 @@ Options for the `WifiSecurity` enum are:
 - `WifiSecurity.WPA3`
 
 ```python
-from WiFiQR import WifiSecurity, WifiNetworkSettings
+from WiFiQR-Gen import WifiSecurity, WifiNetworkSettings
 
 wifi_settings = WifiNetworkSettings(
     ssid="MyWifiNetworkName",
@@ -70,7 +69,7 @@ You can also provide a logo to be displayed in the center of the QR Code. The lo
 The `generate_base64_qrcode_png` method takes an optional `embeded_image_path` parameter and returns a base64 string of the QR Code image.
 
 ```python
-from WiFiQR import WifiSecurity, WifiEapMethod, WifiPhase2Auth, WifiNetworkSettings
+from WiFiQR-Gen import WifiSecurity, WifiEapMethod, WifiPhase2Auth, WifiNetworkSettings
 
 wifi_settings = WifiNetworkSettings(
     ssid="MyWifiNetwork",
