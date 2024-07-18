@@ -21,3 +21,17 @@ license = "https://raw.githubusercontent.com/MelonSmasher/Wi-Fi_QRCode_Generator
 [build-system]
 build-backend = "hatchling.build"
 requires = ["hatchling", "qrcode~=7.4.0", "Pillow"]
+
+[tool.hatch.build.targets.sdist]
+ignore-vcs = true
+include = [
+  "src/Wi-Fi_QRCode_Generator_melonsmasher/*.py"
+]
+artifacts = [
+  "LICENSE"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "src/Wi-Fi_QRCode_Generator_melonsmasher"
+]
