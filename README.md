@@ -1,8 +1,9 @@
 # WiFiQR-Gen (Wi-Fi QRCode Generator)
 
-[![GitHub License](https://img.shields.io/github/license/MelonSmasher/WiFiQR-Gen)]
-[![PyPI version](https://badge.fury.io/py/WiFiQR.svg)](https://badge.fury.io/py/WiFiQR-Gen)
-[![Downloads](https://pepy.tech/badge/WiFiQR-Gen)](https://pepy.tech/project/WiFiQR-Gen)
+![GitHub License](https://img.shields.io/github/license/MelonSmasher/WiFiQR-Gen)
+![PyPI - Version](https://img.shields.io/pypi/v/WiFiQR-Gen)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/WiFiQR-Gen)
+
 
 Python package that generates Wi-Fi QR Codes that can be scanned for easily connecting to Wi-Fi.
 
