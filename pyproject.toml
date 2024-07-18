@@ -11,7 +11,7 @@ description = "Python package that generates Wi-Fi QR Codes that can be scanned 
 name = "WiFiQR-Gen"
 readme = "README.md"
 requires-python = ">=3.8"
-version = "0.1.0"
+version = "0.1.1"
 
 [project.urls]
 homepage = "https://github.com/MelonSmasher/WiFiQR-Gen"
