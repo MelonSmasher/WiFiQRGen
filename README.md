@@ -4,7 +4,6 @@
 ![PyPI - Version](https://img.shields.io/pypi/v/WiFiQRGen)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/WiFiQRGen)
 
-
 Python package that generates Wi-Fi QR Codes that can be scanned for easily connecting to Wi-Fi.
 
 ## Installation
